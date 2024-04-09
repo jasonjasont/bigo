@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/bigo/static/css/main.5a60d963.css",
+    "main.js": "/bigo/static/js/main.3ac7258b.js",
+    "static/js/453.16c95551.chunk.js": "/bigo/static/js/453.16c95551.chunk.js",
+    "static/media/bingo-reno.png": "/bigo/static/media/bingo-reno.8c85b310b991c108bc0e.png",
+    "index.html": "/bigo/index.html",
+    "main.5a60d963.css.map": "/bigo/static/css/main.5a60d963.css.map",
+    "main.3ac7258b.js.map": "/bigo/static/js/main.3ac7258b.js.map",
+    "453.16c95551.chunk.js.map": "/bigo/static/js/453.16c95551.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a60d963.css",
+    "static/js/main.3ac7258b.js"
+  ]
+}
