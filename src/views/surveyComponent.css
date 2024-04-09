@@ -1,0 +1,35 @@
+
+
+
+
+.Radio-button {
+    Padding: 15px;
+    Border-Radius: 10px;
+    border: Solid 2px #0CA789;
+    background: none;
+    color: black;
+}
+
+.Radio-button-checked {
+    background: #0CA789;
+    color: white;
+}
+
+.Survey-choice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin: 50px 10px;
+}
+
+.Survey-separator {
+    background: #F9EC4E;
+    height: 3px;
+}
+
+.Survey-command {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
