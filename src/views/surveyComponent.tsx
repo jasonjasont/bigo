@@ -33,35 +33,35 @@ export function SurveyComponent() {
         return _built !== Built.Unknown && _worksDone.length > 0 && _atticAmenagment !== AtticAmenagment.Unknown;
     }
 
-    return (<div className="Main-flex-component">
-        <BingoRenoHeader />
-        <div className='Survey'>
-            <h3>Quelle est la période de construction de votre maison ?<span className="red-star">*</span></h3>
-            <div className='Survey-choice'>
-                <button
-                    className={'Radio-button ' + isBuiltChecked(Built.Before1945)}
-                    onClick={onBuiltRadioClick(Built.Before1945)}
-                >Avant 1945
-                </button>
-                <button
-                    className={'Radio-button ' + isBuiltChecked(Built.Between1945and1980)}
-                    onClick={onBuiltRadioClick(Built.Between1945and1980)}
-                >1945-1980
-                </button>
-                <button
-                    className={'Radio-button ' + isBuiltChecked(Built.Between1980and2000)}
-                    onClick={onBuiltRadioClick(Built.Between1980and2000)}>1980-2000
-                </button>
-                <button
-                    className={'Radio-button ' + isBuiltChecked(Built.After2000)}
-                    onClick={onBuiltRadioClick(Built.After2000)}>Après 2000
-                </button>
-            </div>
-            <div className='Survey-separator'></div>
-            <h3>2. Quels travaux avez-vous déjà effectués ces 20 dernières années (plusieurs réponses possibles)?<span className="red-star">*</span></h3>
-            <div className='Survey-choice'>
-                <button
-                    className={'Radio-button ' + isWorksSelected(WorksDone.None)}
+    return (
+        <div className="Main-flex-component">
+            <BingoRenoHeader />
+            <div className='Survey'>
+                <h3>Quelle est la période de construction de votre maison ?<span className="red-star">*</span></h3>
+                <div className='Survey-choice'>
+                    <button
+                        className={'Radio-button ' + isBuiltChecked(Built.Before1945)}
+                        onClick={onBuiltRadioClick(Built.Before1945)}
+                    >Avant 1945
+                    </button>
+                    <button
+                        className={'Radio-button ' + isBuiltChecked(Built.Between1945and1980)}
+                        onClick={onBuiltRadioClick(Built.Between1945and1980)}
+                    >1945-1980
+                    </button>
+                    <button
+                        className={'Radio-button ' + isBuiltChecked(Built.Between1980and2000)}
+                        onClick={onBuiltRadioClick(Built.Between1980and2000)}>1980-2000
+                    </button>
+                    <button
+                        className={'Radio-button ' + isBuiltChecked(Built.After2000)}
+                        onClick={onBuiltRadioClick(Built.After2000)}>Après 2000
+                    </button>
+                </div>
+                <div className='Survey-separator'></div>
+                <h3>2. Quels travaux avez-vous déjà effectués ces 20 dernières années (plusieurs réponses possibles)?<span className="red-star">*</span></h3>
+                <div className='Survey-choice'>
+                    <button
                     onClick={onWorksDoneClick(WorksDone.None)}
                 >Aucun travaux
                 </button>
@@ -114,17 +114,17 @@ export function SurveyComponent() {
 
             </div>
             <div className='Survey-separator'></div>
-            <h3>3.</h3>
+            <h3>3.Est-ce que le grenier de votre maison est aménagé ?</h3>
             <div className='Survey-choice'>
                 <button
                     className={'Radio-button ' + isAtticSelected(AtticAmenagment.Converted)}
                     onClick={onAtticClick(AtticAmenagment.Converted)}
-                ><img className="small-image" src="./combleok.png" alt="Combles aménagés" />
+                ><p><strong>Oui</strong></p><img className="small-image" src="./combleok.png" alt="Combles aménagés" />
                 </button>
                 <button
                     className={'Radio-button ' + isAtticSelected(AtticAmenagment.NotConverted)}
                     onClick={onAtticClick(AtticAmenagment.NotConverted)}
-                ><img className="small-image" src="./Bingo-picto combles non amenages.png" alt="Combles non aménagés" />
+                ><p><strong>Non</strong></p><img className="small-image" src="./Bingo-picto combles non amenages.png" alt="Combles non aménagés" />
                 </button>
                 
             </div>
