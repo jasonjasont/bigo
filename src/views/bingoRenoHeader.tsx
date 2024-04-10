@@ -24,9 +24,9 @@ export function BingoRenoHeader() {
         </div>
         <div className="Header-presentation">
             <h2>Des conseils de rénovation personnalisés pour votre maison en 3 clics !</h2>
-            <p>Le Bingo Réno est un outil développé par la Métropole et l'ALEC. Il vous permet, en répondant à
-                quelques questions simples sur votre maison, de connaître les priorités de travaux pour votre
-                maison.</p>
+            <p>L'outil en ligne "Bingo Réno" vous aide à prioriser les travaux de rénovation à réaliser dans votre maison. 
+                L'objectif : réaliser des économies d'énergie et gagner en confort ! Cet outil simplifié et rapide a été développé par Grenoble Alples Métropole et l'Agence Locale pour l'Energie et le Climat (ALEC).
+            </p>
         </div>
     </div>;
 

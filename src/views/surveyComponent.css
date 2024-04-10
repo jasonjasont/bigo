@@ -3,11 +3,12 @@
 
 
 .Radio-button {
-    Padding: 15px;
+    Padding: 25px 100px;
     Border-Radius: 10px;
     border: Solid 2px #0CA789;
     background: none;
     color: black;
+    
 }
 
 .Radio-button-checked {
@@ -18,9 +19,9 @@
 .Survey-choice {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     justify-content: space-between;
-    margin: 50px 10px;
+    margin: 40px 50px;
 }
 
 .Survey-separator {
@@ -32,4 +33,14 @@
     display: flex;
     justify-content: center;
     margin: 30px;
+}
+.red-star {
+    color: red;
+}
+
+.small-image {
+    width: 200px; 
+    height: 200px; 
+    
+    
 }

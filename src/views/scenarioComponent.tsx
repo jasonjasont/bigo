@@ -4,6 +4,7 @@ import { ScenarioType } from "../domain/scenarioType";
 import { StarsComponent } from "./starsComponent";
 import { Scenario } from "../domain/bingoRenoAdvise";
 import { HelpLevel } from "../domain/helpLevel";
+import image1 from '../Bingo-visuel scenario 1.svg';
 // Page proposition de scénarios
 interface ScenarioProperties {
     index: number;
@@ -39,6 +40,14 @@ export function ScenarioComponent(props: ScenarioProperties) {
         return props.scenario;
     }
 
+function getScenarioImage() {
+        switch (props.scenario.type) {
+            case ScenarioType.Ambitious:
+                return image1;
+            default:
+                return null;
+        }
+    }
     function displayedType() {
         switch (getScenario().type) {
             case ScenarioType.Ambitious:
@@ -127,10 +136,11 @@ export function ScenarioComponent(props: ScenarioProperties) {
                 //throw new Error(`Unknown HelpLevel ${helpLevel}`)
         }*/
     }
-
+ console.log(image1)
+ 
     return (<div className="Scenario">
         <div className='Scenario-header'>
-            <div className='Scenario-illustration'></div>
+        <div className="Scenario-illustration" style={{ backgroundImage: `url(${getScenarioImage()})` }}></div>
             <h3>Scenario {props.index}</h3>
             <div className='Scenario-type'>{displayedType()}</div>
             <div className='Scenario-price-container'>
@@ -156,7 +166,10 @@ export function ScenarioComponent(props: ScenarioProperties) {
             <StarsComponent level={getScenario().improveWinterConfort} />
             <p className='Scenario-legend Scenario-star-legend'>Amélioration du confort d'été :</p>
             <StarsComponent level={getScenario().improveSummerConfort} />
+            
         </div>
+        
     </div>)
+    
 }
 

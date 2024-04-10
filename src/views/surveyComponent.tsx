@@ -36,7 +36,7 @@ export function SurveyComponent() {
     return (<div className="Main-flex-component">
         <BingoRenoHeader />
         <div className='Survey'>
-            <h3>Période de construction de ma maison</h3>
+            <h3>Quelle est la période de construction de votre maison ?<span className="red-star">*</span></h3>
             <div className='Survey-choice'>
                 <button
                     className={'Radio-button ' + isBuiltChecked(Built.Before1945)}
@@ -58,7 +58,7 @@ export function SurveyComponent() {
                 </button>
             </div>
             <div className='Survey-separator'></div>
-            <h3>Travaux déjà effectués dans votre maison (depuis moins de 20 ans)</h3>
+            <h3>2. Quels travaux avez-vous déjà effectués ces 20 dernières années (plusieurs réponses possibles)?<span className="red-star">*</span></h3>
             <div className='Survey-choice'>
                 <button
                     className={'Radio-button ' + isWorksSelected(WorksDone.None)}
@@ -114,31 +114,36 @@ export function SurveyComponent() {
 
             </div>
             <div className='Survey-separator'></div>
-            <h3>Est-ce que les combles de votre maison sont aménagés ?</h3>
+            <h3>3.</h3>
             <div className='Survey-choice'>
                 <button
                     className={'Radio-button ' + isAtticSelected(AtticAmenagment.Converted)}
                     onClick={onAtticClick(AtticAmenagment.Converted)}
-                ><h4>Combles aménagés</h4>
-                    <p>(vous avez aménagé les pièces sous votre toit)</p>
+                ><img className="small-image" src="./combleok.png" alt="Combles aménagés" />
                 </button>
                 <button
                     className={'Radio-button ' + isAtticSelected(AtticAmenagment.NotConverted)}
                     onClick={onAtticClick(AtticAmenagment.NotConverted)}
-                ><h4>Combles non aménagés</h4>
-                    <p>(vos combles, votre grenier, ne sont pas aménagés)</p>
+                ><img className="small-image" src="./Bingo-picto combles non amenages.png" alt="Combles non aménagés" />
                 </button>
+                
             </div>
+            
+            
             <div className='Survey-separator'></div>
+            <p><span className="red-star">*</span>Champs obligatoire</p>
             <div className="Survey-command">
                 <button className="Action-Button"
                     onClick={calculate(_built, _atticAmenagment)}
                     disabled={!canCalculate()}>C'est parti !
                 </button>
 
-                <p>Travail sélectionné : {_worksDone || 'Aucun'}</p>
+                
+
+                
             </div>
         </div>
+        
     </div>);
 
     // Cette fonction est appelée lorsque l'utilisateur clique sur un bouton correspondant à une période de construction.
