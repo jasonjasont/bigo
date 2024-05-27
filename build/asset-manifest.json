@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/bigo/static/css/main.312b4669.css",
-    "main.js": "/bigo/static/js/main.2ced987c.js",
+    "main.css": "/bigo/static/css/main.fa4d0a8d.css",
+    "main.js": "/bigo/static/js/main.292e83f7.js",
     "static/js/453.16c95551.chunk.js": "/bigo/static/js/453.16c95551.chunk.js",
     "static/media/bingo-reno.png": "/bigo/static/media/bingo-reno.8c85b310b991c108bc0e.png",
     "static/media/Bingo-visuel scenario 1.svg": "/bigo/static/media/Bingo-visuel scenario 1.fd249e452e6a056f94fc22380cf9b763.svg",
     "index.html": "/bigo/index.html",
-    "main.312b4669.css.map": "/bigo/static/css/main.312b4669.css.map",
-    "main.2ced987c.js.map": "/bigo/static/js/main.2ced987c.js.map",
+    "main.fa4d0a8d.css.map": "/bigo/static/css/main.fa4d0a8d.css.map",
+    "main.292e83f7.js.map": "/bigo/static/js/main.292e83f7.js.map",
     "453.16c95551.chunk.js.map": "/bigo/static/js/453.16c95551.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.312b4669.css",
-    "static/js/main.2ced987c.js"
+    "static/css/main.fa4d0a8d.css",
+    "static/js/main.292e83f7.js"
   ]
 }
