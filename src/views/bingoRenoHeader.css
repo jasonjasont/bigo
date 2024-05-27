@@ -25,3 +25,15 @@
     flex-direction: column;
     order: 1;
 }
+
+.Header-presentation h2 {
+    font-size: 2.5em; 
+}
+
+.Header-presentation p {
+    font-size: 1.1em; 
+}
+
+.hide-text {
+    display: none;
+}

@@ -37,7 +37,7 @@ export function SurveyComponent() {
         <div className="Main-flex-component">
             <BingoRenoHeader />
             <div className='Survey'>
-                <h3>Quelle est la période de construction de votre maison ?<span className="red-star">*</span></h3>
+                <h3>1. Quelle est la période de construction de votre maison ? <span className="red-star">*</span></h3>
                 <div className='Survey-choice'>
                     <button
                         className={'Radio-button ' + isBuiltChecked(Built.Before1945)}
@@ -51,7 +51,7 @@ export function SurveyComponent() {
                     </button>
                     <button
                         className={'Radio-button ' + isBuiltChecked(Built.Between1980and2000)}
-                        onClick={onBuiltRadioClick(Built.Between1980and2000)}>1980-2000
+                        onClick={onBuiltRadioClick(Built.Between1980and2000)}>1981-2000
                     </button>
                     <button
                         className={'Radio-button ' + isBuiltChecked(Built.After2000)}
@@ -59,92 +59,97 @@ export function SurveyComponent() {
                     </button>
                 </div>
                 <div className='Survey-separator'></div>
-                <h3>2. Quels travaux avez-vous déjà effectués ces 20 dernières années (plusieurs réponses possibles)?<span className="red-star">*</span></h3>
+                <h3>2. Quels travaux avez-vous déjà effectués ces 20 dernières années (plusieurs réponses possibles)? <span className="red-star">*</span></h3>
+                <div className='Survey-choice'>
+                    <div className="Survey-simple">
+                        <button
+                            className={'Radio-button ' + isWorksSelected(WorksDone.None)}
+                            onClick={onWorksDoneClick(WorksDone.None)}
+                        >Aucun travaux
+                        </button>
+                    </div>
+                    <div className='Survey-choice'>
+                    <button
+                        className={'Radio-button ' + isWorksSelected(WorksDone.RoofIsolation)}
+                        onClick={onWorksDoneClick(WorksDone.RoofIsolation)}
+                    >Isolation du toit
+                    </button>
+                    <button
+                        className={'Radio-button ' + isWorksSelected(WorksDone.FloorIsolation)}
+                        onClick={onWorksDoneClick(WorksDone.FloorIsolation)}
+                    >Isolation du sol
+                    </button>
+
+                    <button
+                        className={'Radio-button ' + isWorksSelected(WorksDone.WallInternalIsolation)}
+                        onClick={onWorksDoneClick(WorksDone.WallInternalIsolation)}
+                    >Isolation des murs 
+                    </button>
+                    <button
+                        className={'Radio-button ' + isWorksSelected(WorksDone.WindowIsolation)}
+                        onClick={onWorksDoneClick(WorksDone.WindowIsolation)}
+                    >Installation de fenêtres en double ou triple vitrage
+                    </button>
+                    <button
+                        className={'Radio-button ' + isWorksSelected(WorksDone.CentralHeatingChange)}
+                        onClick={onWorksDoneClick(WorksDone.CentralHeatingChange)}
+                    >Changement du système de chauffage central
+                    </button>
+                    <button
+                        className={'Radio-button ' + isWorksSelected(WorksDone.WoodBurnerChange)}
+                        onClick={onWorksDoneClick(WorksDone.WoodBurnerChange)}
+                    >Installation ou changement d'un poêle ou d'un insert de cheminée
+                    </button>
+                    <button
+                        className={'Radio-button ' + isWorksSelected(WorksDone.ChauffeEau)}
+                        onClick={onWorksDoneClick(WorksDone.ChauffeEau)}
+                    >Installation ou changement d'un chauffe-eau
+                    </button>
+                    <button
+                        className={'Radio-button ' + isWorksSelected(WorksDone.PanneauSolaire)}
+                        onClick={onWorksDoneClick(WorksDone.PanneauSolaire)}
+                    >Installation d'un système de panneaux solaires
+                    </button>
+                    <button
+                        className={'Radio-button ' + isWorksSelected(WorksDone.InstallOrChangeVMC)}
+                        onClick={onWorksDoneClick(WorksDone.InstallOrChangeVMC)}
+                    >Installation ou changement d'un système de ventilation (VMC)
+                    </button>
+                    </div>
+
+                </div>
+                <div className='Survey-separator'></div>
+                <h3>3. Si vous avez un grenier, est-il aménagé ? <span className="red-star">*</span></h3>
                 <div className='Survey-choice'>
                     <button
-                    onClick={onWorksDoneClick(WorksDone.None)}
-                >Aucun travaux
-                </button>
-                <button
-                    className={'Radio-button ' + isWorksSelected(WorksDone.RoofIsolation)}
-                    onClick={onWorksDoneClick(WorksDone.RoofIsolation)}
-                >Isolation du toit
-                </button>
-                <button
-                    className={'Radio-button ' + isWorksSelected(WorksDone.FloorIsolation)}
-                    onClick={onWorksDoneClick(WorksDone.FloorIsolation)}
-                >Isolation du sol
-                </button>
+                        className={'Radio-button ' + isAtticSelected(AtticAmenagment.Converted)}
+                        onClick={onAtticClick(AtticAmenagment.Converted)}
+                    ><p><strong>Oui</strong></p><img className="small-image" src="./combleok.png" alt="Combles aménagés" />
+                    </button>
+                    <button
+                        className={'Radio-button ' + isAtticSelected(AtticAmenagment.NotConverted)}
+                        onClick={onAtticClick(AtticAmenagment.NotConverted)}
+                    ><p><strong>Non</strong></p><img className="small-image" src="./Bingo-picto combles non amenages.png" alt="Combles non aménagés" />
+                    </button>
 
-                <button
-                    className={'Radio-button ' + isWorksSelected(WorksDone.WallInternalIsolation)}
-                    onClick={onWorksDoneClick(WorksDone.WallInternalIsolation)}
-                >Isolation des murs par l'intérieur
-                </button>
-                <button
-                    className={'Radio-button ' + isWorksSelected(WorksDone.WindowIsolation)}
-                    onClick={onWorksDoneClick(WorksDone.WindowIsolation)}
-                >Installation de fenêtres en double ou triple vitrage
-                </button>
-                <button
-                    className={'Radio-button ' + isWorksSelected(WorksDone.CentralHeatingChange)}
-                    onClick={onWorksDoneClick(WorksDone.CentralHeatingChange)}
-                >Changement du système de chauffage central
-                </button>
-                <button
-                    className={'Radio-button ' + isWorksSelected(WorksDone.WoodBurnerChange)}
-                    onClick={onWorksDoneClick(WorksDone.WoodBurnerChange)}
-                >Installation ou changement d'un poêle ou d'un insert de cheminée
-                </button>
-                <button
-                    className={'Radio-button ' + isWorksSelected(WorksDone.ChauffeEau)}
-                    onClick={onWorksDoneClick(WorksDone.ChauffeEau)}
-                >Installation ou changement d'un chauffe-eau
-                </button>
-                <button
-                    className={'Radio-button ' + isWorksSelected(WorksDone.PanneauSolaire)}
-                    onClick={onWorksDoneClick(WorksDone.PanneauSolaire)}
-                >Installation d'un système de panneaux solaires
-                </button>
-                <button
-                    className={'Radio-button ' + isWorksSelected(WorksDone.InstallOrChangeVMC)}
-                    onClick={onWorksDoneClick(WorksDone.InstallOrChangeVMC)}
-                >Installation ou changement d'un système de ventilation
-                </button>
+                </div>
 
-            </div>
-            <div className='Survey-separator'></div>
-            <h3>3.Est-ce que le grenier de votre maison est aménagé ?</h3>
-            <div className='Survey-choice'>
-                <button
-                    className={'Radio-button ' + isAtticSelected(AtticAmenagment.Converted)}
-                    onClick={onAtticClick(AtticAmenagment.Converted)}
-                ><p><strong>Oui</strong></p><img className="small-image" src="./combleok.png" alt="Combles aménagés" />
-                </button>
-                <button
-                    className={'Radio-button ' + isAtticSelected(AtticAmenagment.NotConverted)}
-                    onClick={onAtticClick(AtticAmenagment.NotConverted)}
-                ><p><strong>Non</strong></p><img className="small-image" src="./Bingo-picto combles non amenages.png" alt="Combles non aménagés" />
-                </button>
-                
-            </div>
-            
-            
-            <div className='Survey-separator'></div>
-            <p><span className="red-star">*</span>Champs obligatoire</p>
-            <div className="Survey-command">
-                <button className="Action-Button"
-                    onClick={calculate(_built, _atticAmenagment)}
-                    disabled={!canCalculate()}>C'est parti !
-                </button>
 
                 
+                <p><span className="red-star">*</span> Champs obligatoires</p>
+                <div className="Survey-command">
+                    <button className="Action-Button"
+                        onClick={calculate(_built, _atticAmenagment)}
+                        disabled={!canCalculate()}>C'est parti !
+                    </button>
 
-                
+
+
+
+                </div>
             </div>
-        </div>
-        
-    </div>);
+
+        </div>);
 
     // Cette fonction est appelée lorsque l'utilisateur clique sur un bouton correspondant à une période de construction.
     // Elle met à jour l'état `_built` pour correspondre à la période de construction sélectionnée.
@@ -170,7 +175,7 @@ export function SurveyComponent() {
                 default:
                     filteredData = data;
             }
-            
+
 
 
         };
@@ -314,8 +319,8 @@ export function SurveyComponent() {
                             matchingObjects.push(obj);
                         }
                     });
-                    
-                    
+
+
 
                     switch (built) {
                         case Built.Before1945:

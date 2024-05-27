@@ -22,15 +22,11 @@ export function ScenarioComponent(props: ScenarioProperties) {
     function decriptionDisplayed() {
         switch (getScenario().type) {
             case ScenarioType.Ambitious:
-                return <> C'est l'option prioritaire pour tous les logements, pour réduire significativement mes
-                    factures et
-                    améliorer le confort de ma maison aussi bien en hiver qu'en été</>;
+                return <> C'est le scénario le plus complet, à prioriser si vous pouvez le financer. Il vous permettra de gagner considérablement en confort et en économies d'énergie.</>;
             case ScenarioType.MidRange:
-                return <>Si vous ne pouvez pas faire une rénovation complète en une fois, voici les travaux prioritaires
-                    avec le meilleur compromis coût des travaux / économies d'énergies</>;
+                return <>Vous ne pouvez pas vous lancer dans une rénovation complète en une fois ? Voici les travaux préconisés, avec le meilleur compromis coût / économies d'énergie.</>;
             case ScenarioType.SmallBudget:
-                return <>Vous ne pouvez pas vous lancer dans des travaux importants ? Voilà les travaux les plus
-                    pertinents pour votre maison avec un budget restreint</>;
+                return <>Vous ne pouvez pas vous lancer dans des travaux importants ? Voici les travaux les plus pertinents pour votre maison, pour un budget réduit.</>;
             default:
                 throw new Error(`Unknown type : ${getScenario().type}`)
         }
@@ -51,7 +47,7 @@ function getScenarioImage() {
     function displayedType() {
         switch (getScenario().type) {
             case ScenarioType.Ambitious:
-                return 'RENOVATION AMBITIEUSE';
+                return 'RÉNOVATION AMBITIEUSE';
             case ScenarioType.MidRange:
                 return 'INTERMÉDIAIRE';
             case ScenarioType.SmallBudget:
@@ -141,24 +137,24 @@ function getScenarioImage() {
     return (<div className="Scenario">
         <div className='Scenario-header'>
         <div className="Scenario-illustration" style={{ backgroundImage: `url(${getScenarioImage()})` }}></div>
-            <h3>Scenario {props.index}</h3>
+            <h3>Scénario {props.index}</h3>
             <div className='Scenario-type'>{displayedType()}</div>
             <div className='Scenario-price-container'>
-                <div className='Scenario-price'>~ {getScenario().price.toLocaleString()}€*</div>
+                <div className='Scenario-price'>Env. {getScenario().price.toLocaleString()}€*</div>
             </div>
         </div>
         <div className='Scenario-description'>{decriptionDisplayed()}</div>
         <div className='Scenario-separator'></div>
         <div className='Scenario-my-works'>
-            <b>Mes travaux:</b>
+            <b>Travaux à réaliser pour ce scénario :</b>
             {getWorks()}
         </div>
         <div className='Scenario-separator'></div>
         <div className='Scenario-badges'>
-            <p className='Scenario-legend Scenario-help-legend'>Niveau potentiel d'aides par rapport au montant des
-                travaux**</p>
+           
             <div className='Scenario-help-level-container'>
-                <div className='Scenario-help-level'>{getHelpLevel()}</div>
+                <h4>Gains pour votre maison : </h4>
+               
             </div>
             <p className='Scenario-legend Scenario-star-legend'>Baisse des factures :</p>
             <StarsComponent level={getScenario().lowerPayment} />

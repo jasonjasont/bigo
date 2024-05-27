@@ -30,22 +30,21 @@ export class BingoRenoAdvise {
 
 
         this.scenario = [];
+        //Ordre des scénario + montage
+    
 
         this.addScenario(new Scenario(
-            ScenarioType.Ambitious,
-            matchingObjects[0]['__32'],
+            ScenarioType.SmallBudget,
+            matchingObjects[0]['__12'].toLocaleString('fr-FR'),
             [
-                matchingObjects[0]["SC 1"],
-                matchingObjects[0]['__27'],
-                matchingObjects[0]['__28'],
-                matchingObjects[0]['__29'],
-                matchingObjects[0]['__30'],
-                matchingObjects[0]['__31'],
+                matchingObjects[0]['SC 1'],
+                matchingObjects[0]['__10'],
+                matchingObjects[0]['__11']
             ].filter(Boolean), // Filtrer les valeurs vides
 
-            Math.ceil(matchingObjects[0]['__34'] / 2),
-            Math.ceil(matchingObjects[0]['__35'] / 2),
-            Math.ceil(matchingObjects[0]['__36'] / 2),
+            Math.ceil(matchingObjects[0]['__14'] / 2),
+            Math.ceil(matchingObjects[0]['__15'] / 2),
+            Math.ceil(matchingObjects[0]['__16'] / 2),
         ));
 
         this.addScenario(new Scenario(
@@ -63,18 +62,23 @@ export class BingoRenoAdvise {
             Math.ceil(matchingObjects[0]['__25'] / 2)
         ));
 
+        
+
         this.addScenario(new Scenario(
-            ScenarioType.SmallBudget,
-            matchingObjects[0]['__12'],
+            ScenarioType.Ambitious,
+            matchingObjects[0]['__32'],
             [
-                matchingObjects[0]['SC 1'],
-                matchingObjects[0]['__10'],
-                matchingObjects[0]['__11']
+                matchingObjects[0]["SC 1"],
+                matchingObjects[0]['__27'],
+                matchingObjects[0]['__28'],
+                matchingObjects[0]['__29'],
+                matchingObjects[0]['__30'],
+                matchingObjects[0]['__31'],
             ].filter(Boolean), // Filtrer les valeurs vides
 
-            Math.ceil(matchingObjects[0]['__14'] / 2),
-            Math.ceil(matchingObjects[0]['__15'] / 2),
-            Math.ceil(matchingObjects[0]['__16'] / 2),
+            Math.ceil(matchingObjects[0]['__34'] / 2),
+            Math.ceil(matchingObjects[0]['__35'] / 2),
+            Math.ceil(matchingObjects[0]['__36'] / 2),
         ));
 
         /*
