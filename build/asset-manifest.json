@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/bigo/static/css/main.fa4d0a8d.css",
-    "main.js": "/bigo/static/js/main.292e83f7.js",
+    "main.css": "/bigo/static/css/main.5433ec24.css",
+    "main.js": "/bigo/static/js/main.b6b65821.js",
     "static/js/453.16c95551.chunk.js": "/bigo/static/js/453.16c95551.chunk.js",
     "static/media/bingo-reno.png": "/bigo/static/media/bingo-reno.8c85b310b991c108bc0e.png",
+    "static/media/Bingo-visuel scenario 3.svg": "/bigo/static/media/Bingo-visuel scenario 3.e2f91442776def84fbb2a5bf87df8be1.svg",
     "static/media/Bingo-visuel scenario 1.svg": "/bigo/static/media/Bingo-visuel scenario 1.fd249e452e6a056f94fc22380cf9b763.svg",
+    "static/media/Bingo-visuel scenario 2.svg": "/bigo/static/media/Bingo-visuel scenario 2.c3ef3894b92589356b67a0802b255931.svg",
     "index.html": "/bigo/index.html",
-    "main.fa4d0a8d.css.map": "/bigo/static/css/main.fa4d0a8d.css.map",
-    "main.292e83f7.js.map": "/bigo/static/js/main.292e83f7.js.map",
+    "main.5433ec24.css.map": "/bigo/static/css/main.5433ec24.css.map",
+    "main.b6b65821.js.map": "/bigo/static/js/main.b6b65821.js.map",
     "453.16c95551.chunk.js.map": "/bigo/static/js/453.16c95551.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa4d0a8d.css",
-    "static/js/main.292e83f7.js"
+    "static/css/main.5433ec24.css",
+    "static/js/main.b6b65821.js"
   ]
 }
