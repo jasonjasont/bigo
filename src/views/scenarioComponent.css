@@ -37,6 +37,9 @@
     background: #F9EC4E;
     display: flex;
     flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Scenario-price-container {
@@ -116,3 +119,14 @@
 h4 {
     font-size: 1.5rem;
 }
+
+img {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+

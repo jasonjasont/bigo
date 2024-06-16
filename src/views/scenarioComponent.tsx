@@ -5,6 +5,8 @@ import { StarsComponent } from "./starsComponent";
 import { Scenario } from "../domain/bingoRenoAdvise";
 import { HelpLevel } from "../domain/helpLevel";
 import image1 from '../Bingo-visuel scenario 1.svg';
+import image2 from '../Bingo-visuel scenario 2.svg';
+import image3 from '../Bingo-visuel scenario 3.svg';
 // Page proposition de scénarios
 interface ScenarioProperties {
     index: number;
@@ -37,13 +39,19 @@ export function ScenarioComponent(props: ScenarioProperties) {
     }
 
 function getScenarioImage() {
-        switch (props.scenario.type) {
-            case ScenarioType.Ambitious:
-                return image1;
-            default:
-                return null;
-        }
+    switch (props.scenario.type) {
+        case ScenarioType.Ambitious:
+            return image1;
+
+        case ScenarioType.MidRange:
+            return image2;
+
+        case ScenarioType.SmallBudget:
+            return image3;
+        
+        
     }
+}
     function displayedType() {
         switch (getScenario().type) {
             case ScenarioType.Ambitious:
@@ -136,7 +144,7 @@ function getScenarioImage() {
  
     return (<div className="Scenario">
         <div className='Scenario-header'>
-        <div className="Scenario-illustration" style={{ backgroundImage: `url(${getScenarioImage()})` }}></div>
+        <img src={getScenarioImage()} alt="Scenario" />
             <h3>Scénario {props.index}</h3>
             <div className='Scenario-type'>{displayedType()}</div>
             <div className='Scenario-price-container'>
